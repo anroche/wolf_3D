@@ -6,7 +6,7 @@
 /*   By: anroche <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/12 14:58:23 by anroche           #+#    #+#             */
-/*   Updated: 2018/02/19 13:46:50 by anroche          ###   ########.fr       */
+/*   Updated: 2017/09/30 08:05:15 by anroche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	phread(t_indication *id)
 	}
 	i = 0;
 	while (++i <= 8)
-		pthread_create(&t[i - 1], NULL, wheel, &tab[i - 1]);
+		pthread_create(&t[i - 1], NULL, ft_wolf, &tab[i - 1]);
 	while (i--)
 		pthread_join(t[i], NULL);
 }
